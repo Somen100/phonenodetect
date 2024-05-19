@@ -1,0 +1,46 @@
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+  <h2 class="my-4 text-center">Phone Number Detection Form</h2>
+
+  <div class="row w-100">
+    <div class="col-md-6">
+      <form (ngSubmit)="detectPhoneNumbers()">
+        <div class="form-group">
+          <label for="inputText">Enter the text to detect phone numbers:</label>
+          <textarea
+            class="form-control"
+            id="inputText"
+            name="inputText"
+            [(ngModel)]="inputText"
+            rows="5"
+            placeholder="Type or paste text here..."
+            style="resize: none;"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Detect Phone Numbers</button>
+      </form>
+
+      <h3 class="my-4 text-center">Or upload a file to detect phone numbers:</h3>
+
+      <form (ngSubmit)="detectPhoneNumbersFromFile()">
+        <div class="form-group">
+          <input type="file" class="form-control-file" (change)="onFileSelected($event)">
+        </div>
+        <button type="submit" class="btn btn-secondary w-100">Upload and Detect</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="phoneNumbers && phoneNumbers.length > 0" class="mt-4">
+        <h3 class="text-center">Detected Phone Numbers:</h3>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let phoneNumber of phoneNumbers">
+            <strong>Number:</strong> {{ phoneNumber.number }}, <strong>Format:</strong> {{ phoneNumber.format }}
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="errorMessage" class="mt-4 alert alert-danger">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+</div>

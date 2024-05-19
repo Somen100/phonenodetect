@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+
+/* Style for the container */
+.container {
+  margin: auto; /* Center the container horizontally */
+  max-width: 600px; /* Set maximum width */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background color */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Style for the form */
+form {
+  margin-bottom: 20px; /* Add some space below the form */
+}
+
+/* Style for the textarea */
+textarea {
+  width: 100%; /* Take up full width */
+  height: 150px; /* Set height */
+  resize: none; /* Prevent textarea resizing */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Style for the button */
+button[type="submit"] {
+  width: 100%; /* Take up full width */
+  padding: 10px; /* Add padding */
+  background-color: #007bff; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+/* Style for the list group */
+.list-group-item {
+  border: none; /* Remove border */
+  background-color: transparent; /* Transparent background */
+  padding: 5px 0; /* Adjust padding */
+}
+
+/* Style for the alert */
+.alert {
+  margin-top: 20px; /* Add space at the top */
+  padding: 10px; /* Add padding */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Style for the alert - Success */
+.alert-success {
+  background-color: #d4edda; /* Green background */
+  color: #155724; /* Dark green text color */
+}
+
+/* Style for the alert - Danger */
+.alert-danger {
+  background-color: #f8d7da; /* Red background */
+  color: #721c24; /* Dark red text color */
+}
